@@ -39,3 +39,16 @@ for step_ in xrange(200):
 # 4. Define init step
 # 5. Define a session
 # 6. Run init and train_goal in session.
+# 2018-12-25 23:26:36.122912:
+# I tensorflow/core/platform/cpu_feature_guard.cc:141]
+# Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+# 0 [-0.48678386] [0.7051269]
+# 20 [0.0845153] [0.21306801]
+# 40 [0.24637519] [0.12813774]
+# 60 [0.2866551] [0.10700227]
+# 80 [0.29667902] [0.10174257]
+# 100 [0.29917353] [0.10043366]
+# 120 [0.29979432] [0.10010793]
+# 140 [0.29994884] [0.10002685]
+# 160 [0.2999873] [0.10000668]
+# 180 [0.29999685] [0.10000166]
