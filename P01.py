@@ -30,7 +30,13 @@ session.run(init)
 for step_ in xrange(200):
     session.run(train_goal)
     if step_ % 20 == 0:
+        # 此处的session.run并不是run(train_goal)，而是run(weights)
+        # 因为weights是一个tensor，不可以直接输出，必须用run的形式看到
+        # 不能直接输出的原因是tf采用静态图的机制，图中的信息只有run才能看到
+        # 在tf中，tensor是一个线性操作。
         print step_, session.run(weights), session.run(biases)
+
+session.close()
 
 # To sum up:
 # 1. Set train set: x_data and y_data
@@ -39,6 +45,9 @@ for step_ in xrange(200):
 # 4. Define init step
 # 5. Define a session
 # 6. Run init and train_goal in session.
+# 7. Close session
+
+# Output:
 # 2018-12-25 23:26:36.122912:
 # I tensorflow/core/platform/cpu_feature_guard.cc:141]
 # Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
