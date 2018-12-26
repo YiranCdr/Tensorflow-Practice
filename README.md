@@ -19,3 +19,8 @@
     |140| [0.29994884]| [0.10002685]|
     |160| [0.2999873]| [0.10000668]|
     |180| [0.29999685]| [0.10000166]|
+    
+2. P02 - Session & Variable
+- A tf.Variable is actually a Tensor, so as linear operations like tf.add().
+- To assign a tensor to another tensor, use tf.assign()
+- You must use Session().run() to fetch a tensor. 
