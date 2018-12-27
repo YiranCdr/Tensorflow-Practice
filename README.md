@@ -32,9 +32,16 @@
 
 4. P04 - A simple neural network
 - Structure: 1 * 10(relu) * 1
-- loss_function: gradient descent
-- optimizer: mean(sigma(square(y_predict - y_data)))
+- Loss_function: mean(sigma(square(y_predict - y_data)))
+- Optimizer: gradient descent
     ![fig_P04](fig/fig_P04.png)
     
 5. P05 - Tensorborad
     ![fig_P05](fig/fig_P05.png)
+    
+6. P06 - Classification on MNIST
+- Structure: 728 * 10(softmax)
+- Loss: cross entropy
+- Optimizer: gradient_descent
+- Test output: 2
+    ![fig_P06_\[2\]](fig/fig_P06.png)

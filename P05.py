@@ -8,10 +8,10 @@ def add_layer(layer_name, input, input_size, output_size, activation_function=No
     with tf.name_scope(layer_name):
         with tf.name_scope('Weight'):
             Weights = tf.Variable(tf.random_uniform([input_size, output_size]))
-            tf.summary.histogram(Weights)
+            tf.summary.histogram('Weight', Weights)
         with tf.name_scope('biases'):
             biases = tf.Variable(tf.zeros([1, output_size]) + 0.1)
-            tf.summary.histogram(layer_name + '_biases', biases)
+            tf.summary.histogram('biases', biases)
         with tf.name_scope('Wx_plus_b'):
             Wx_b = tf.matmul(input, Weights) + biases
         with tf.name_scope('activation_function'):
@@ -19,7 +19,7 @@ def add_layer(layer_name, input, input_size, output_size, activation_function=No
                 output = activation_function(Wx_b)
             else:
                 output = Wx_b
-            tf.summary.histogram(layer_name + '/output', output)
+            tf.summary.histogram('output', output)
         return output
 
 
