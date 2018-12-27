@@ -44,4 +44,4 @@
 - Loss: cross entropy
 - Optimizer: gradient_descent
 - Test output: 2
-    ![fig_P06_\[2\]](fig/fig_P06.png)
+    ![fig_P06_\[2\]](fig/fig_P06.png) 
