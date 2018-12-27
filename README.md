@@ -35,3 +35,6 @@
 - loss_function: gradient descent
 - optimizer: mean(sigma(square(y_predict - y_data)))
     ![fig_P04](fig/fig_P04.png)
+    
+5. P05 - Tensorborad
+    ![fig_P05](fig/fig_P05.png)
