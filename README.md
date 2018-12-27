@@ -24,3 +24,14 @@
 - A tf.Variable is actually a Tensor, so as linear operations like tf.add().
 - To assign a tensor to another tensor, use tf.assign()
 - You must use Session().run() to fetch a tensor. 
+
+3. P03 - Placeholder
+- Use placeholder instead of Variable.
+- Don't need to init.
+- Use `feed_dict` to pass arguments.
+
+4. P04 - A simple neural network
+- Structure: 1 * 10(relu) * 1
+- loss_function: gradient descent
+- optimizer: mean(sigma(square(y_predict - y_data)))
+    ![fig_P04](fig/fig_P04.png)
